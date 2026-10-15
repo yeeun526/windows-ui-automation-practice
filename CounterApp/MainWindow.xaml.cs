@@ -28,4 +28,10 @@ public partial class MainWindow : Window
         _count++;
         CountText.Text = $"현재 숫자: {_count}";
     }
+
+    private void ResetButton_Click(object sender, RoutedEventArgs e)
+    {
+        _count = 0;
+        CountText.Text = $"현재 숫자: {_count}";
+    }
 }

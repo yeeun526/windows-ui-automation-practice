@@ -23,6 +23,6 @@ The app displays a counter. Select **숫자 올리기** to increment it.
 dotnet test CounterApp.UIItests\CounterApp.UIItests.csproj
 ```
 
-The tests launch the WPF app, find its controls by their automation IDs, and verify the displayed count for multiple click counts.
+The test fixture launches one WPF app window for all test cases, finds its controls by their automation IDs, and verifies the displayed count for multiple click counts. After each case, it uses the reset button to return the counter to zero before the next case.
 
 UI automation tests need an interactive Windows desktop session.
