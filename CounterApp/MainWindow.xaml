@@ -23,6 +23,14 @@
                     Height="40"
                     Click="IncrementButton_Click" />
 
+            <Button x:Name="DecrementButton"
+                    AutomationProperties.AutomationId="DecrementButton"
+                    Content="숫자 내리기"
+                    Width="160"
+                    Height="40"
+                    Margin="0,8,0,0"
+                    Click="DecrementButton_Click" />
+
             <Button x:Name="ResetButton"
                     AutomationProperties.AutomationId="ResetButton"
                     Content="초기화"

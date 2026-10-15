@@ -1,28 +1,28 @@
-# Windows UI Automation Practice
+# Windows UI 자동화 연습
 
-A small WPF counter app and an NUnit/FlaUI UI automation test project for learning Windows desktop testing.
+Windows 데스크톱 앱 테스트 자동화를 연습하기 위한 간단한 WPF 카운터 앱과 NUnit/FlaUI UI 자동화 테스트 프로젝트입니다.
 
-## Requirements
+## 준비 사항
 
-- Windows
+- Windows 운영체제
 - .NET 10 SDK
 
-## Run the sample app
+## 예제 앱 실행
 
-From this directory:
+프로젝트 폴더에서 다음 명령을 실행합니다.
 
-```powershell
+```cmd
 dotnet run --project CounterApp\CounterApp.csproj
 ```
 
-The app displays a counter. Select **숫자 올리기** to increment it.
+앱에 카운터가 표시됩니다. **숫자 올리기** 버튼을 누르면 숫자가 증가하고, **숫자 내리기** 버튼을 누르면 감소합니다. 카운터는 0 아래로 내려가지 않습니다. **초기화** 버튼을 누르면 0으로 돌아갑니다.
 
-## Run the UI automation tests
+## UI 자동화 테스트 실행
 
-```powershell
+```cmd
 dotnet test CounterApp.UIItests\CounterApp.UIItests.csproj
 ```
 
-The test fixture launches one WPF app window for all test cases, finds its controls by their automation IDs, and verifies the displayed count for multiple click counts. After each case, it uses the reset button to return the counter to zero before the next case.
+테스트 묶음이 WPF 앱 창을 한 번 실행합니다. 테스트는 자동화 ID로 화면 요소를 찾고, 버튼을 여러 횟수만큼 눌렀을 때 표시되는 숫자를 확인합니다. 감소 테스트는 0, 최솟값 1, 최솟값 바로 위인 2에서의 동작과 0 아래로 내려가려는 경우를 검사합니다. 각 테스트 케이스가 끝나면 초기화 버튼을 눌러 카운터를 0으로 되돌린 뒤 다음 케이스를 진행합니다.
 
-UI automation tests need an interactive Windows desktop session.
+UI 자동화 테스트를 실행하려면 Windows 데스크톱에 로그인된 대화형 세션이 필요합니다.

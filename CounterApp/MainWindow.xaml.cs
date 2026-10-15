@@ -29,6 +29,12 @@ public partial class MainWindow : Window
         CountText.Text = $"현재 숫자: {_count}";
     }
 
+    private void DecrementButton_Click(object sender, RoutedEventArgs e)
+    {
+        _count = Math.Max(0, _count - 1);
+        CountText.Text = $"현재 숫자: {_count}";
+    }
+
     private void ResetButton_Click(object sender, RoutedEventArgs e)
     {
         _count = 0;
