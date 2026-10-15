@@ -1,0 +1,27 @@
+﻿<Window x:Class="CounterApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CounterApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock x:Name="CountText"
+                    AutomationProperties.AutomationId="CountText"
+                    Text="현재 숫자: 0"
+                    FontSize="24"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,16" />
+
+            <Button x:Name="IncrementButton"
+                    AutomationProperties.AutomationId="IncrementButton"
+                    Content="숫자 올리기"
+                    Width="160"
+                    Height="40"
+                    Click="IncrementButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
